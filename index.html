@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+    <link rel="icon" type="image/png" href="whatdiditblox.png">
+    <script src="script.js" defer></script>
+    <title>What Did It Blox</title>
+</head>
+<body>
+
+    <div class="overlay">
+        <div class="overlay-box">
+            <button class="overlay-close" id="overlayClose"><i class="ti ti-x"></i></button>
+            <div class="overlay-games">
+                <div class="overlay-game">
+                    <img class="overlay-roblox-thumb" src="" alt="Roblox game thumbnail">
+                    <div class="overlay-game-name overlay-roblox-name"></div>
+                </div>
+                <div class="overlay-middle">
+                    <div class="copy-of"></div>
+                    <div class="overlay-notes"></div>
+                </div>
+                <div class="overlay-game">
+                    <img class="overlay-original-thumb" src="" alt="Original game">
+                    <div class="overlay-game-name overlay-original-name"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="request-modal" id="requestModal">
+        <div class="request-box">
+            <button class="overlay-close" id="requestClose"><i class="ti ti-x"></i></button>
+            <h2 class="request-title">Request a game</h2>
+            <p class="request-sub">Know a Roblox game that copies another? Let me know.</p>
+
+            <input type="text" class="request-input" id="req-roblox" placeholder="Roblox game name" maxlength="100">
+            <input type="text" class="request-input" id="req-original" placeholder="Original game name [if it was bloxed]" maxlength="100">
+
+            <select class="request-input" id="req-status">
+                <option value="copy">Copy</option>
+                <option value="inspired">Heavily Inspired</option>
+                <option value="original">Not a copy</option>
+            </select>
+
+            <textarea class="request-input" id="req-notes" placeholder="Notes [pls]" maxlength="300" rows="3"></textarea>
+
+            <input type="text" id="req-honey" style="display:none;" tabindex="-1" autocomplete="off">
+
+            <p class="captcha-label" id="captcha-question"></p>
+            <input type="text" class="request-input" id="req-captcha" placeholder="Your answer" maxlength="5">
+
+            <button class="request-submit" id="req-submit">Submit</button>
+            <p class="request-feedback" id="req-feedback"></p>
+        </div>
+    </div>
+
+    <div class="counter">
+        <span id="gameCount">0</span> games tracked
+    </div>
+
+    <nav>
+        <button class="requestAdd">
+            <i class="ti ti-plus" style="font-size: 1.75em;"></i>
+            <span class="btn-label" style="font-size: 1em;">Request a game</span>
+        </button>
+    </nav>
+
+    <header class="top">
+        <h1>What Did It Blox?</h1>
+    </header>
+
+    <input class="search" type="text" placeholder="Arsenal, Piggy..." maxlength="50">
+
+    <section class="displayfield"></section>
+
+    <footer>© 2026 What Did It Blox — Not affiliated with Roblox Corporation<br><br>
+        <span class="disclaimer">This site is a community database reflecting user opinions. All game names and images belong to their respective owners.</span>
+    </footer>
+
+</body>
+</html>
